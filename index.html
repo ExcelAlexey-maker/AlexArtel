@@ -3,161 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="O84R7Kp4VEFQsmu5itda_h6VPmX3z3XzBydWqkqTWB4" />
-    <meta name="description" content="Артель — объединение людей, создающих автономные системы и музыку для души.">
-    <meta name="keywords" content="концентрация внимания, музыка от депрессии, автономные системы, боты, CRM, таблицы">
-    <title>Артель — Сообщество и Соцпроект</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <title>Артель</title>
     <style>
-        :root { 
-            --bg: #0d0202; 
-            --card: #1a0505; 
-            --accent: #ff3b3b; 
-            --text: #f4f4f4; 
-        }
-
-        body { 
-            background: var(--bg); 
-            color: var(--text); 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; 
-            padding: 40px 20px; 
-            display: flex; 
-            justify-content: center; 
-        }
-
-        .card { 
-            background: var(--card); 
-            border: 1px solid #330a0a; 
-            border-radius: 24px; 
-            padding: 40px; 
-            max-width: 450px; 
-            width: 100%; 
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            animation: pulse 5s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0%, 100% { border-color: #330a0a; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-            50% { border-color: var(--accent); box-shadow: 0 0 30px rgba(255,59,59,0.15); }
-        }
-
-        h1 { font-weight: 700; letter-spacing: -1px; margin-bottom: 25px; color: var(--accent); }
+        body { background: #0d0202; color: #f4f4f4; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .card { background: #1a0505; border: 1px solid #ff3b3b; border-radius: 20px; padding: 30px; width: 90%; max-width: 350px; text-align: center; }
         
-        .manifesto { font-size: 15px; line-height: 1.7; font-weight: 300; text-align: left; opacity: 0.9; }
-
-        .highlight { 
-            color: var(--accent); 
-            text-decoration: none; 
-            font-weight: 700; 
-            border-bottom: 1px solid transparent;
-            transition: 0.3s;
-        }
-        .highlight:hover { border-bottom: 1px solid var(--accent); }
-
-        /* Блок кошелька */
-        .wallet-label { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; margin-top: 30px; opacity: 0.5; }
-        .wallet-container {
-            background: #000;
-            padding: 15px;
-            border-radius: 12px;
-            margin: 10px 0 20px;
-            border: 1px solid #220505;
-            position: relative;
-            overflow: hidden;
-        }
-        .wallet-address { 
-            font-family: 'JetBrains Mono', monospace; 
-            font-size: 12px; 
-            word-break: break-all; 
-            color: #fff;
-        }
+        h1 { color: #ff3b3b; margin: 0 0 20px; font-size: 28px; letter-spacing: 2px; }
         
-        .btn-copy {
-            background: var(--accent);
-            color: #fff;
-            border: none;
-            padding: 14px;
-            width: 100%;
-            border-radius: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-        .btn-copy:hover { transform: scale(1.02); background: #ff5555; }
+        .bullets { text-align: left; margin-bottom: 25px; font-size: 16px; line-height: 1.4; }
+        .bullets div { margin-bottom: 10px; border-left: 3px solid #ff3b3b; padding-left: 10px; }
 
-        /* Соцсети */
-        .socials { display: flex; justify-content: center; gap: 25px; margin-top: 30px; }
-        .socials a { 
-            color: var(--text); 
-            font-size: 20px; 
-            transition: 0.3s; 
-            opacity: 0.6;
-        }
-        .socials a:hover { 
-            color: var(--accent); 
-            opacity: 1; 
-            filter: drop-shadow(0 0 8px var(--accent)); 
-        }
-
-        .status { font-size: 11px; margin-top: 30px; opacity: 0.4; }
+        .wallet-box { background: #000; padding: 15px; border-radius: 10px; font-family: monospace; font-size: 13px; margin-bottom: 10px; word-break: break-all; border: 1px solid #330000; }
+        
+        .btn { background: #ff3b3b; color: #fff; border: none; padding: 15px; width: 100%; border-radius: 10px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        
+        .socials { margin-top: 25px; display: flex; justify-content: center; gap: 25px; }
+        .socials a { color: #ff3b3b; font-size: 24px; text-decoration: none; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.2); opacity: 1; } }
     </style>
 </head>
 <body>
-
     <div class="card">
-        <h1>Артель</h1>
+        <h1>АРТЕЛЬ</h1>
         
-        <div class="manifesto">
-            «Артель» — это не "темы" про бизнес, это про нас, людей, которые знают, чего хотят. <br><br>
-            Чем занимаюсь конкретно я по жизни: 
-            <a href="https://excelalexey-maker.github.io/" class="highlight">автономные системы</a> 
-            и контент, который помогает сохранять фокус и душевный баланс в мире шума. <br><br>
-            Музыка для концентрации, спокойствия, усмирения депрессионного состояния души — это соцпроект, доступный каждому. <br><br>
-            Я ищу не «клиентов», а соратников. Тех, кто готов двигаться вместе, работать по бартеру или поддерживать идеи ресурсами. <br><br>
-            Все ваши благодарности и ресурсы идут исключительно на оплату вычислительных мощностей и генерацию качественного контента. 
-            <strong>Нет вас — нет жизни для идей.</strong>
+        <div class="bullets">
+            <div>— Автономные системы</div>
+            <div>— Музыка для фокуса</div>
+            <div>— Соцпроект для людей</div>
         </div>
 
-        <div class="wallet-label">Поддержка ресурсов</div>
-        <div class="wallet-container">
-            <div class="wallet-address" id="wallet">TCtCAxs5VXkUnaov21t3bZPegpRBBoYF4w</div>
-        </div>
-        <button class="btn-copy" onclick="copy()">Скопировать кошелек</button>
-
-        <p style="font-size: 12px; margin-top: 25px; opacity: 0.7;">
-            Работа по бартеру или идеи? <br>
-            <a href="https://t.me/ExcelAlexey" class="highlight">Напиши мне в Telegram</a>
-        </p>
+        <div style="font-size: 12px; opacity: 0.6; margin-bottom: 5px;">Поддержка (TRC-20):</div>
+        <div class="wallet-box" id="w">TCtCAxs5VXkUnaov21t3bZPegpRBBoYF4w</div>
+        <button class="btn" onclick="copy()">Скопировать кошелек</button>
 
         <div class="socials">
-            <a href="https://t.me/ExcelAlexey" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-            <a href="https://www.tiktok.com/@alex.artel?_r=1&_t=ZS-94EzWGMsYxJ" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/alexeyplaytoexcel?igsh=ajlvazYwZmowM3h0" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://t.me/ExcelAlexey"><i class="fab fa-telegram"></i> TG</a>
+            <a href="https://www.tiktok.com/@alex.artel"><i class="fab fa-tiktok"></i> TIK</a>
         </div>
-
-        <div class="status">System Status: Active</div>
+        
+        <div style="margin-top: 20px; font-size: 13px;">
+            <a href="https://excelalexey-maker.github.io/" style="color: #666; text-decoration: none;">Больше про системы ></a>
+        </div>
     </div>
 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script>
         function copy() {
-            const text = document.getElementById('wallet').innerText.trim();
-            navigator.clipboard.writeText(text).then(() => {
-                const btn = document.querySelector('.btn-copy');
-                const old = btn.innerText;
-                btn.innerText = 'СКОПИРОВАНО';
-                btn.style.background = '#28a745';
-                setTimeout(() => {
-                    btn.innerText = old;
-                    btn.style.background = '#ff3b3b';
-                }, 2000);
-            });
+            navigator.clipboard.writeText(document.getElementById('w').innerText);
+            alert('Скопировано');
         }
     </script>
 </body>
